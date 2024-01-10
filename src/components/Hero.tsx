@@ -17,8 +17,8 @@ function Hero() {
                     visible: { opacity: 1, y: 0 }
                 }}
             >
-                <span>Discover Inner Serenity Amidst Luxury.</span>
-                <span>Your Peaceful Escape Awaits.</span> 
+                <span>The Future</span>
+                <span>Is Electric.</span> 
             </motion.div> 
 
             <motion.div
@@ -32,7 +32,7 @@ function Hero() {
                     visible: { opacity: 1, y: 0 }
                 }}
             >
-                Come visit us in beautiful <span className="font-bold hover:bg-gradient-to-r from-red-500 via-orange-400 to-amber-500 hover:bg-clip-text hover:text-transparent transition duration-500">Bora Bora, French Polynesia</span> 
+                The leaders in commercial <span className="font-bold hover:bg-gradient-to-r from-red-500 via-orange-400 to-amber-500 hover:bg-clip-text hover:text-transparent transition duration-500">EV Charging solutions.</span> 
             </motion.div>       
 
             <motion.div

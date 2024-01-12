@@ -7,7 +7,7 @@ function Hero() {
             className="h-screen flex flex-col items-center bg-hero-bg-img bg-cover"
         >
             <motion.div
-                className="text-3xl md:text-6xl mt-40 md:mt-80 text-center text-white flex flex-col"
+                className="mt-40 md:mt-80 font-semibold flex flex-col"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -17,8 +17,8 @@ function Hero() {
                     visible: { opacity: 1, y: 0 }
                 }}
             >
-                <span>The Future</span>
-                <span>Is Electric.</span> 
+                <span className="text-3xl md:text-6xl text-white">The Future</span>
+                <span className="text-5xl md:text-8xl text-amber-400">Is Electric.</span> 
             </motion.div> 
 
             <motion.div
@@ -32,7 +32,7 @@ function Hero() {
                     visible: { opacity: 1, y: 0 }
                 }}
             >
-                The leaders in commercial <span className="font-bold hover:bg-gradient-to-r from-red-500 via-orange-400 to-amber-500 hover:bg-clip-text hover:text-transparent transition duration-500">EV Charging solutions.</span> 
+                The leaders in commercial <span className="font-bold hover:bg-gradient-to-r from-red-500 via-orange-400 to-amber-500 hover:bg-clip-text hover:text-transparent transition duration-500">EV charging solutions.</span> 
             </motion.div>       
 
             <motion.div
@@ -46,16 +46,9 @@ function Hero() {
                     visible: { opacity: 1, y: 0 }
                 }}
             >
-                <input 
-                    type="text" 
-                    placeholder="Search"
-                    className="rounded-full w-full pl-6 pr-18 py-4 mx-5 bg-slate-300 outline-none text-white text-lg placeholder-white"
-                />
-                {/* <img 
-                    src={searchIcon} 
-                    alt="search icon" 
-                    className="h-10 w-10 absolute right-10 cursor-pointer"
-                /> */}
+                <div className="w-4/5 bg-white hover:bg-amber-400 transition duration-300 text-black text-3xl py-5 rounded-full">
+                    Our Solutions
+                </div>
             </motion.div>  
             
             {/* this div adds a white smoke rising from the bottom effect which looks reallllllly coooooooooooooool */}

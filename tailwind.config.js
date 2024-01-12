@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
         backgroundImage: {
-            'hero-bg-img': "url('/assets/hero-car.jpg')"
+            'hero-bg-img': "url('/assets/hero-car.jpg')",
+            'contact-bg': 'linear-gradient(133deg, #fffb76 0%, #fae28e 100%)'
         }
     },
   },

@@ -16,7 +16,7 @@ const Link = ({ page, currentPage, setCurrentPage }: LinkProps) => {
 
     return(
         <AnchorLink 
-            className={`${currentPage === lowerCasePage ? "text-amber-400" : ""} text-2xl text-white cursor-pointer hover:bg-nav-hover hover:bg-clip-text hover:text-transparent transition duration-500 hover:no-underline`} 
+            className={`${currentPage === lowerCasePage ? "text-amber-400" : ""} text-2xl text-white cursor-pointer hover:text-amber-400 transition duration-500`} 
             href={`#${lowerCasePage}`}
             onClick={() => setCurrentPage(lowerCasePage)}
         >
@@ -64,22 +64,22 @@ function NavBar({ currentPage, setCurrentPage }: LinkProps) {
                     ?
                     <div className="flex justify-between gap-4 lg:gap-20">
                         <Link
-                            page="Overview"
+                            page="About"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
                         />
                         <Link
-                            page="Accomodations"
+                            page="Products"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
                         />
                         <Link
-                            page="Amenities"
+                            page="Projects"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
                         />
                         <Link
-                            page="Gallery"
+                            page="Contact"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
                         />
@@ -124,22 +124,22 @@ function NavBar({ currentPage, setCurrentPage }: LinkProps) {
                             onClick={() => setMenuToggled(!menuToggled)}
                         >
                             <Link
-                                page="Overview"
+                                page="About"
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                             />
                             <Link
-                                page="Accomodations"
+                                page="Products"
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                             />
                             <Link
-                                page="Amenities"
+                                page="Projects"
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                             />
                             <Link
-                                page="Gallery"
+                                page="Contact"
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                             />

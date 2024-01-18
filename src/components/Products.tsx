@@ -1,5 +1,6 @@
 import ProductCard from "./ProductCard"
 import EVCharger from "/public/assets/EVCharger.jpg"
+import { motion } from "framer-motion"
 
 /* types for product objects in product array */
 type ProductProps = {
@@ -42,11 +43,24 @@ function Products() {
             <h2 className="text-6xl text-center">Wide selection of products to fit every need</h2>
 
             {/* products section */}
-            <div className="w-full h-4/5 flex items-center gap-12 mt-16">
+            <motion.div 
+                className="w-full h-4/5 flex items-center gap-12 mt-16"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                variants={{
+                    hidden: { opacity: 1, scale: 0 }, 
+                    visible: {
+                        opacity: 1,
+                        scale: 1,
+                        transition: { delayChildren: 0.3, staggerChildren: 0.2 }
+                    }
+                }}
+            >
                 {products.map(product => 
                     <ProductCard image={product.image} title={product.title} subtitle={product.subtitle} /> 
                 )}
-            </div>
+            </motion.div>
         </div>
     </section>
   )

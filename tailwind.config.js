@@ -8,7 +8,8 @@ export default {
     extend: {
         backgroundImage: {
             'hero-bg-img': "url('/assets/hero-car.jpg')",
-            'contact-bg': 'linear-gradient(133deg, #87cefa 0%, #6495ed 100%)'
+            'contact-bg': 'linear-gradient(133deg, #87cefa 0%, #6495ed 100%)',
+            'smartCharging-bg-img': "url('/assets/EVCharging2.jpg')"
         }
     },
   },

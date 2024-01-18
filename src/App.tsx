@@ -6,6 +6,8 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Contact from './components/Contact'
 import Products from './components/Products'
+import Projects from './components/Projects'
+import SmartCharging from './components/SmartCharging'
 
 function App() {
     //using state to identify the current page the user is browser
@@ -20,7 +22,9 @@ function App() {
             />
             <Hero />
             <About />
+            <SmartCharging />
             <Products />
+            <Projects />
             <Contact />
             <Footer />
         </>

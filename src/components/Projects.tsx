@@ -1,26 +1,26 @@
 import Masonry from '@mui/lab/Masonry'
-/* import Car1 from '/public/assets/Car1.jpg'
+import Car1 from '/public/assets/Car1.jpg'
 import Car2 from '/public/assets/Car2.jpg'
 import Car3 from '/public/assets/Car3.jpg'
-import Car4 from '/public/assets/Car4.jpg' */
+import Car4 from '/public/assets/Car4.jpg'
 
 function Projects() {
     /* images array with tags */
     const images = [
         {
-            image: '/public/assets/Car1.jpg',
+            image: Car1,
             tag: 'Earth'
         },
         {
-            image: '/public/assets/Car2.jpg',
+            image: Car2,
             tag: 'Space'
         },
         {
-            image: '/public/assets/Car3.jpg',
+            image: Car3,
             tag: 'Space'
         },
         {
-            image: '/public/assets/Car4.jpg',
+            image: Car4,
             tag: 'Space'
         }
     ]

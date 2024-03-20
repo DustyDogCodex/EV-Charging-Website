@@ -3,6 +3,7 @@ import useMediaQuery from '../hooks/useMediaQuery'
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 type LinkProps = {
     page: string,
@@ -10,7 +11,7 @@ type LinkProps = {
     setCurrentPage: (page: string) => void
 }
 
-const Link = ({ page, currentPage, setCurrentPage }: LinkProps) => {
+const SmoothLink = ({ page, currentPage, setCurrentPage }: LinkProps) => {
     //page names will be capitalised for display. This will convert them to lowercase so they can accurately be compared for conditional rendering. 
     const lowerCasePage = page.toLowerCase()
 
@@ -53,32 +54,33 @@ function NavBar({ currentPage, setCurrentPage }: LinkProps) {
                 className='w-full flex items-center justify-between py-5 px-3 lg:w-4/5'
             >
                 {/* brand logo and name */}
-                <div
+                <Link 
+                    to='/'
                     className='flex items-center justify-center'
                 >  
                     <span className='hidden sm:inline-block ml-3 text-2xl text-white'>GoSpace</span>
-                </div>
+                </Link>
 
                 {/* menu options */}
                 {aboveSmallScreens
                     ?
                     <div className="flex justify-between gap-4 lg:gap-20">
-                        <Link
+                        <SmoothLink
                             page="About"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
                         />
-                        <Link
+                        <SmoothLink
                             page="Products"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
                         />
-                        <Link
+                        <SmoothLink
                             page="Projects"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
                         />
-                        <Link
+                        <SmoothLink
                             page="Contact"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}
@@ -123,22 +125,22 @@ function NavBar({ currentPage, setCurrentPage }: LinkProps) {
                             /* closes menu after a link is clicked */
                             onClick={() => setMenuToggled(!menuToggled)}
                         >
-                            <Link
+                            <SmoothLink
                                 page="About"
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                             />
-                            <Link
+                            <SmoothLink
                                 page="Products"
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                             />
-                            <Link
+                            <SmoothLink
                                 page="Projects"
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                             />
-                            <Link
+                            <SmoothLink
                                 page="Contact"
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}

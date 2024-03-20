@@ -1,18 +1,22 @@
+import FacebookIcon from '@mui/icons-material/Facebook'
+import XIcon from '@mui/icons-material/X'
+import InstagramIcon from '@mui/icons-material/Instagram'
+
 function Footer() {
     return (
         <footer
-            className="w-full h-full flex flex-col md:flex-row justify-center bg-footer-bg py-8 px-5"
+            className="w-full h-full flex flex-col md:flex-row justify-center bg-slate-200 px-5"
         >
             {/* support/links/address section */}
             <div
-                className="w-4/5 flex flex-col items-center mt-3"
+                className="w-4/5 flex items-center justify-center mt-3"
             >
                 {/* support and links section */}
                 <div
                     className="flex items-center gap-20"
                 >
-                    <div className="w-1/2 font-semibold text-2xl">
-                        Experts in Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae possimus magnam adipisci molestias animi, blanditiis velit exercitationem a accusantium sequi.
+                    <div className="w-1/2 font-semibold text-2xl text-center">
+                        Experts in creating tailored, turnkey EV charging solutions.
                     </div>
 
                     <div
@@ -27,10 +31,10 @@ function Footer() {
                     <div
                         className="flex flex-col items-center"
                     >
-                        <span className="text-lg font-bold mb-5">Links</span>
-                        <span>Payments & Taxes</span>
-                        <span>Privacy Policy</span>
-                        <span>Terms of Service</span>
+                        <span className="text-lg font-bold mb-5">Socials</span>
+                            <FacebookIcon color='primary'/>
+                            <XIcon color='primary'/>
+                            <InstagramIcon color='primary'/>
                     </div>
 
                     {/* address on the bottom */}
@@ -43,12 +47,12 @@ function Footer() {
                         <span>Real State, 00000</span>
                     </div>
                 </div>
-            </div>
 
-            <div
-                className="flex flex-col items-center justify-center"
-            >
-                <span className="pt-2 border-t-2 text-center border-white">Created with ❤️ by &copy; 2024 Varun Malaviya</span>
+                <div
+                    className="flex flex-col items-center justify-center"
+                >
+                    <span className="pt-2 border-t-2 text-center">Created with ❤️ by &copy; 2024 Varun Malaviya</span>
+                </div>
             </div>
         </footer>
     )

@@ -1,5 +1,6 @@
 import EVCharging from '/public/assets/EV charging.jpg'
 import { motion } from 'framer-motion'
+import { Link } from "react-router-dom"
 
 function About() {
     return (
@@ -9,7 +10,7 @@ function About() {
         >
             <div className='w-4/5 flex items-center'>
                 {/* section tagline/heading */}
-                <motion.span 
+                <motion.div 
                     className="text-5xl mt-10"
                     initial="hidden"
                     whileInView="visible"
@@ -20,8 +21,12 @@ function About() {
                         visible: { opacity: 1, x: 0 }
                     }}
                 >
-                    Future proof your home or business with our tailored EV charging solutions today.
-                </motion.span>
+                    <p className='mb-5'>Future proof your home or business with our tailored turnkey solutions for EV charging today.</p>
+
+                    <Link to='about' className='bg-green-500 mt-8 px-8 py-2 rounded-lg text-white'>
+                        Learn More
+                    </Link>
+                </motion.div>
 
                 {/* image */}
                 <motion.img 

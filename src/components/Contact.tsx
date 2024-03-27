@@ -1,18 +1,24 @@
+import { Link } from "react-router-dom"
+
 function Contact() {
     return (
         <section 
             id="contact"
-            className="h-screen bg-contact-bg py-12"    
+            className="h-screen bg-contact-bg py-12 flex items-start justify-center"    
         >
+            <div className="container flex flex-col">
                 {/* contact section heading */}
-                <span className="text-8xl ml-20 border border-cyan-300">
+                <span className="text-6xl">
                     Ready to start your electric future?
                 </span>
 
-                <div className="rounded-full bg-white w-1/2 ml-20 mt-16 text-5xl text-center p-2">
+                <Link
+                    to={'/contact'} 
+                    className="rounded-full bg-white w-1/3 mt-16 text-4xl text-center p-2"
+                >
                     Contact Us
-                </div>
-            
+                </Link>
+            </div>
         </section>
     )
 }

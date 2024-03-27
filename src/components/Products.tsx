@@ -39,8 +39,22 @@ function Products() {
         id="products"
         className="h-screen flex items-center justify-center w-full"
     >
-        <div className="w-4/5 h-4/5 flex flex-col items-center">
-            <h2 className="text-6xl text-center">Wide selection of products to fit every need</h2>
+        <div className="container flex flex-col items-center">
+            {/* featured product section with section heading */}
+            <div className="flex items-center justify-between w-full p-2">
+                <h2 className="text-4xl font-semibold">Wide selection of products to fit every need</h2>
+
+                {/* featured product */}
+                <div>
+                    <h2 className="text-2xl text-center">Our Featured Product</h2>
+                    {/* image */}
+                    <img 
+                        src="/assets/EVCharger.jpg" 
+                        alt="Featured product image" 
+                        className="w-full h-72 rounded-2xl"    
+                    />
+                </div>
+            </div>
 
             {/* products section */}
             <motion.div 

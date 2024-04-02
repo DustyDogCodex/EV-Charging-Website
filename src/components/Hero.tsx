@@ -1,12 +1,14 @@
 import { motion } from "framer-motion"
+import HeroSlider from "./HeroSlider"
 
 function Hero() {
     return (
         <section
             id="home"
-            className="h-screen flex flex-col items-center bg-hero-bg-img bg-cover"
+            className="h-screen flex flex-col justify-center items-center bg-hero-bg-img bg-cover"
         >
-            <motion.div
+            <HeroSlider />
+            {/* <motion.div
                 className="mt-40 md:mt-80 font-semibold flex flex-col"
                 initial="hidden"
                 whileInView="visible"
@@ -49,8 +51,8 @@ function Hero() {
                 <div className="w-4/5 bg-white hover:bg-amber-400 transition duration-300 text-black text-3xl py-5 rounded-full">
                     Our Solutions
                 </div>
-            </motion.div>  
-            
+            </motion.div>  */}
+
             {/* this div adds a white smoke rising from the bottom effect which looks reallllllly coooooooooooooool */}
             <div className="absolute h-[75px] xs:h-[200px] bottom-0 w-full bg-[linear-gradient(180deg,_#ffffff00_0%,_#FFF_100%)]" />
         </section>

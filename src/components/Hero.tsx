@@ -54,7 +54,7 @@ function Hero() {
             </motion.div>  */}
 
             {/* this div adds a white smoke rising from the bottom effect which looks reallllllly coooooooooooooool */}
-            <div className="absolute h-[75px] xs:h-[200px] bottom-0 w-full bg-[linear-gradient(180deg,_#ffffff00_0%,_#FFF_100%)]" />
+            <div className="absolute z-30 h-[75px] xs:h-[200px] bottom-0 w-full bg-[linear-gradient(180deg,_#ffffff00_0%,_#FFF_100%)]" />
         </section>
     )
 }

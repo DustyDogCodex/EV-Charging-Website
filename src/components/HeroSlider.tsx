@@ -49,10 +49,10 @@ function HeroSlider() {
     return (
         <section
             id="gallery"
-            className="w-full min-h-screen flex justify-center items-center bg-black py-10 px-3"
+            className="w-full min-h-screen flex justify-center items-center bg-black"
         >
             <motion.div
-                className="relative h-[500px] sm:h-[600px] md:h-[1000px] w-[350px] sm:w-[600px] md:w-full overflow-hidden lg:w-3/5" 
+                className="relative h-full w-full overflow-hidden" 
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -64,10 +64,10 @@ function HeroSlider() {
             >
                 <AnimatePresence initial={false} custom={direction}>
                     <motion.img 
-                        className="rounded-lg object-cover absolute w-full h-full" 
+                        className="object-cover absolute w-full h-full" 
                         alt="Image slider" 
                         key={page}
-                        src={mediaImages[imageIndex]} 
+                        src={mediaImages[imageIndex].image} 
                         variants={variants}  
                         initial="enter"
                         animate="center"
@@ -95,7 +95,7 @@ function HeroSlider() {
 
                 {/* button to go left */}
                 <div
-                    className="absolute top-[50%] z-20 left-3 cursor-pointer p-2 flex items-center rounded-full bg-black/70 hover:bg-indigo-600 transition duration-300"
+                    className="absolute top-[50%] z-20 left-20 cursor-pointer p-2 flex items-center rounded-full bg-black/70 hover:bg-indigo-600 transition duration-300"
                 >
                     <FontAwesomeIcon 
                         icon={faChevronLeft} 
@@ -106,7 +106,7 @@ function HeroSlider() {
 
                 {/* button to go right */} 
                 <div
-                    className="absolute top-[50%] z-20 right-3 cursor-pointer p-2 flex items-center rounded-full bg-black/70 hover:bg-indigo-600 transition duration-300"
+                    className="absolute top-[50%] z-20 right-20 cursor-pointer p-2 flex items-center rounded-full bg-black/70 hover:bg-indigo-600 transition duration-300"
                 >
                     <FontAwesomeIcon 
                         icon={faChevronRight} 
@@ -114,6 +114,14 @@ function HeroSlider() {
                         onClick={() => paginate(-1)}
                     />
                 </div>  
+                
+                {/* Div containing title and subtitle to go with image */}
+                <div
+                    className="absolute top-[50%] z-20 left-[20%] cursor-pointer p-2 flex flex-col items-start transition duration-300"
+                >
+                    <span className="text-white">{mediaImages[imageIndex].title}</span>
+                    <span className="text-white">{mediaImages[imageIndex].subtitle}</span>
+                </div> 
             </motion.div>
         </section>
     )

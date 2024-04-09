@@ -80,11 +80,42 @@ function AboutUs() {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-violet-200">
-            {/* container class to center the FAQ's accordion */}
             <div className="container">
-                <h1 className='text-4xl mb-5'>Frequently Asked Questions</h1>
+                {/* Our Management Team section */}
+                <div className='my-5'>
+                    <h1 className='text-center text-4xl font-semibold'>Our Team</h1>
 
+                    {/* Team bios and pictures */}
+                    <div className='flex items-center justify-around'>
+                        <div className='flex flex-col items-center justify-center mx-2'>
+                            <img 
+                                src="/assets/ProfileImage1.jpg" 
+                                alt="Headshot" 
+                                className='h-60 w-60 rounded-full object-center'
+                            />
+                            <span className='font-bold text-base'>David Beckham</span>
+                            <span className='text-sm italic my-5'>CEO, Local Legend</span>
+
+                            <p className='text-center text-sm'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis sunt officia rerum totam accusamus a ex vel repellat voluptates expedita eaque, fuga, eveniet perferendis? Ratione debitis consequatur unde ad officiis.</p>
+                        </div>
+
+                        <div className='flex flex-col items-center justify-center mx-2'>
+                            <img 
+                                src="/assets/ProfileImage2.jpg" 
+                                alt="Headshot" 
+                                className='h-60 w-60 rounded-full object-center'
+                            />
+                            <span className='font-bold text-base'>Wayne Rooney</span>
+                            <span className='text-sm italic my-5'>Fleet Chief, Local Angry Man</span>
+
+                            <p className='text-center text-sm'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis sunt officia rerum totam accusamus a ex vel repellat voluptates expedita eaque, fuga, eveniet perferendis? Ratione debitis consequatur unde ad officiis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* FAQ's accordion */}
                 <div>
+                    <h1 className='text-4xl mb-5'>Frequently Asked Questions</h1>
                     <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
                             <Typography>What is a GoSpace?</Typography>

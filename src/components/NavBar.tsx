@@ -17,7 +17,7 @@ const SmoothLink = ({ page, currentPage, setCurrentPage }: LinkProps) => {
 
     return(
         <AnchorLink 
-            className={`${currentPage === lowerCasePage ? "text-amber-400" : ""} text-2xl text-white cursor-pointer hover:text-amber-400 transition duration-500`} 
+            className={`${currentPage === lowerCasePage ? "text-amber-400" : ""} text-2xl cursor-pointer hover:text-amber-400 transition duration-300`} 
             href={`#${lowerCasePage}`}
             onClick={() => setCurrentPage(lowerCasePage)}
         >
@@ -48,17 +48,17 @@ function NavBar({ currentPage, setCurrentPage }: LinkProps) {
 
     return (
         <nav
-            className={`${topOfPage ? "" : "bg-sky-300"} fixed top-0 z-40 w-full flex items-center justify-center`}
+            className='fixed top-0 z-40 w-full flex items-center justify-center'
         >
             <div
-                className='w-full flex items-center justify-between py-5 px-3 lg:w-4/5'
+                className={`${topOfPage ? "bg-white" : "bg-violet-500 text-white shadow-lg shadow-green-600"} transition duration-300 rounded-full mt-5 w-full flex items-center justify-between py-5 px-6 lg:w-3/5`}
             >
                 {/* brand logo and name */}
                 <Link 
                     to='/'
                     className='flex items-center justify-center'
                 >  
-                    <span className='hidden sm:inline-block ml-3 text-2xl text-white'>GoSpace</span>
+                    <span className={`${topOfPage ? "text-black" : "text-white"} hidden sm:inline-block ml-3 text-2xl`}>GoSpace</span>
                 </Link>
 
                 {/* menu options */}

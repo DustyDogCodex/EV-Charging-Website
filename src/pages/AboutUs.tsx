@@ -79,8 +79,15 @@ function AboutUs() {
         }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-violet-200">
+        <div className="min-h-screen flex items-center justify-center bg-violet-400">
             <div className="container">
+                {/* Mission Statement */}
+                <div>
+                    <h1 className='text-6xl text-center mb-10'>Who We Are</h1>
+                    <p className='text-center text-xl'>At GoSpace, our mission is to revolutionize electric vehicle charging infrastructure by creating convenient and accessible 'GoSpaces' where customers can effortlessly charge their cars. We are committed to accelerating the transition to sustainable transportation by providing innovative, reliable, and user-friendly charging solutions. Through our dedication to customer satisfaction, environmental stewardship, and technological advancement, we aim to empower individuals and communities to embrace electric mobility and contribute to a cleaner, greener future for all.</p>
+                </div>
+
+
                 {/* Our Management Team section */}
                 <div className='my-5'>
                     <h1 className='text-center text-4xl font-semibold'>Our Team</h1>

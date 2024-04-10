@@ -119,8 +119,8 @@ function HeroSlider() {
                 <div
                     className="absolute top-[50%] z-20 left-[20%] cursor-pointer p-2 flex flex-col items-start transition duration-300"
                 >
-                    <span className="text-white">{mediaImages[imageIndex].title}</span>
-                    <span className="text-white">{mediaImages[imageIndex].subtitle}</span>
+                    <span className="text-white bg-green-400 text-3xl mb-3 p-2 rounded-lg">{mediaImages[imageIndex].title}</span>
+                    <span className="text-white bg-purple-400 text-xl ml-4 p-2 rounded-lg">{mediaImages[imageIndex].subtitle}</span>
                 </div> 
             </motion.div>
         </section>

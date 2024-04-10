@@ -51,7 +51,7 @@ function NavBar({ currentPage, setCurrentPage }: LinkProps) {
             className='fixed top-0 z-40 w-full flex items-center justify-center'
         >
             <div
-                className={`${topOfPage ? "bg-white" : "bg-violet-500 text-white shadow-lg shadow-green-600"} transition duration-300 rounded-full mt-5 w-full flex items-center justify-between py-5 px-6 lg:w-3/5`}
+                className={`${topOfPage ? "bg-white" : "bg-indigo-600 text-white shadow-lg shadow-green-600"} transition duration-300 rounded-full mt-5 w-full flex items-center justify-between py-5 px-6 lg:w-3/5`}
             >
                 {/* brand logo and name */}
                 <Link 

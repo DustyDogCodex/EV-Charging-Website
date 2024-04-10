@@ -1,6 +1,7 @@
 import ProductCard from "./ProductCard"
 import EVCharger from "/public/assets/EVCharger.jpg"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
 /* types for product objects in product array */
 type ProductProps = {
@@ -42,7 +43,15 @@ function Products() {
         <div className="container flex flex-col items-center">
             {/* featured product section with section heading */}
             <div className="flex items-center justify-between w-full p-2">
-                <h2 className="text-4xl font-semibold">Wide selection of products to fit every need</h2>
+                <div>
+                    <h2 className="text-4xl font-semibold mb-5">Wide selection of products to fit every need</h2>
+                    <Link 
+                        to={'/products'}
+                        className="bg-green-400 px-5 py-2 text-2xl rounded-2xl text-white hover:bg-indigo-500 transition duration-500"
+                    >
+                        View More
+                    </Link>
+                </div>
 
                 {/* featured product */}
                 <div>

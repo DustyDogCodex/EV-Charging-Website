@@ -79,8 +79,8 @@ function AboutUs() {
         }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-violet-400">
-            <div className="container">
+        <div className="min-h-screen flex items-center justify-center bg-gray-300">
+            <div className="container my-28">
                 {/* Mission Statement */}
                 <div>
                     <h1 className='text-6xl text-center mb-10'>Who We Are</h1>
@@ -120,9 +120,30 @@ function AboutUs() {
                     </div>
                 </div>
 
-                {/* FAQ's accordion */}
+                {/* achievements/laurels section */}
                 <div>
-                    <h1 className='text-4xl mb-5'>Frequently Asked Questions</h1>
+                    <h2 className='text-center text-4xl'>Our Achievements</h2>
+
+                    <h4 className='text-xl font-bold mb-3'>NEVI Participant</h4>
+                    <p>
+                        The <strong><a href='https://www.fhwa.dot.gov/bipartisan-infrastructure-law/nevi_formula_program.cfm' target='_blank' className='underline cursor-pointer'>National Electric Vehicle Infrastructure (NEVI) Formula Program</a></strong> is a federal initiative established by the Bipartisan Infrastructure Law. Its purpose is to provide nearly $5 billion over 5 years to help states create a network of 500,000 electric vehicle charging stations along federally designated Alternative Fuel Corridors. These charging stations will facilitate the adoption of electric vehicles (EVs) and contribute to reducing greenhouse gas emissions.
+                    </p>
+                    <p className='mt-3'>
+                        As an electric vehicle charging infrastructure company, our participation in the NEVI program is indeed fortunate. By leveraging this funding, GoSpace plays a crucial role in building out the charging infrastructure, contributing to the nationwide electrification of the fleet. This opportunity allows us to be at the forefront of sustainable transportation, supporting cleaner energy and a greener future for our nation. 🚗⚡🌿
+                    </p>
+
+                    <h4 className='text-xl font-bold my-3'>ISN Certification</h4>
+                    <p>
+                        At GoSpace, we pride ourselves on our commitment to excellence and safety in every aspect of our operations. As a proud recipient of <strong><a href='https://www.isnetworld.com/en/' target='_blank' className='underline cursor-pointer'>ISN Certification</a></strong>, we uphold the highest standards of quality, integrity, and compliance in all our endeavors. Our dedication to maintaining ISN certification reflects our unwavering dedication to creating a workplace that prioritizes the well-being of our employees, clients, and partners alike.
+                    </p>
+                    <p className='mt-3'>
+                        With our ISN certification, we demonstrate our proactive approach to risk management and regulatory compliance. This certification serves as a testament to our rigorous safety protocols, comprehensive training programs, and ongoing commitment to continuous improvement. By adhering to the stringent requirements set forth by ISNetworld, we ensure that our operations meet and exceed industry standards, providing peace of mind to all stakeholders involved. Our commitment to safety and compliance is not just a requirement; it's a core value that guides our daily operations and decision-making processes. Whether it's in the field, the office, or the boardroom, we remain steadfast in our mission to deliver superior service while upholding the highest standards of safety and integrity.
+                    </p>
+                </div>
+
+                {/* FAQ's section/accordion */}
+                <div>
+                    <h1 className='text-3xl my-5 text-center'>Frequently Asked Questions</h1>
                     <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
                             <Typography>What is a GoSpace?</Typography>

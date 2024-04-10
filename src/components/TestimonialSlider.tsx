@@ -1,4 +1,4 @@
-import { mediaImages } from "../data"
+import { CustomerReviews } from "../data"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -33,23 +33,22 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity
 }
 
-function HeroSlider() {
+function TestimonialSlider() {
     const [[ page, direction ], setPage ] = useState([0, 0])
 
     // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
     // then wrap that within 0-2 to find our image ID in the array below. By passing an
     // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
     // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
-    const imageIndex = wrap(0, mediaImages.length, page)
+    const imageIndex = wrap(0, CustomerReviews.length, page)
 
     const paginate = (newDirection: number) => {
         setPage([page + newDirection, newDirection])
     }
 
     return (
-        <section
-            id="gallery"
-            className="w-full min-h-screen flex justify-center items-center bg-black"
+        <div
+            className="w-full h-[400px] flex justify-center items-center"
         >
             <motion.div
                 className="relative h-full w-full overflow-hidden" 
@@ -63,11 +62,9 @@ function HeroSlider() {
                 }}
             >
                 <AnimatePresence initial={false} custom={direction}>
-                    <motion.img 
-                        className="object-cover absolute w-full h-full" 
-                        alt="Image slider" 
-                        key={page}
-                        src={mediaImages[imageIndex].image} 
+                    <motion.div 
+                        className="absolute w-full h-full bg-white rounded-xl flex flex-col items-center justify-center" 
+                        key={page} 
                         variants={variants}  
                         initial="enter"
                         animate="center"
@@ -90,7 +87,15 @@ function HeroSlider() {
                             }
                             return e
                         }}
+                    >
+                        <img 
+                        src={CustomerReviews[imageIndex].image} 
+                        alt="Company Logo" 
+                        className="w-48 h-40"
                     />
+                    <span className="text-white bg-green-400 text-3xl mb-3 p-2 rounded-lg">{CustomerReviews[imageIndex].name}, {CustomerReviews[imageIndex].position}</span>
+                    <span className="text-white bg-purple-400 text-2xl p-2 rounded-lg">{CustomerReviews[imageIndex].review}</span>
+                    </motion.div>
                 </AnimatePresence>
 
                 {/* button to go left */}
@@ -114,17 +119,9 @@ function HeroSlider() {
                         onClick={() => paginate(-1)}
                     />
                 </div>  
-                
-                {/* Div containing title and subtitle to go with image */}
-                <div
-                    className="absolute top-[50%] z-20 left-[20%] cursor-pointer p-2 flex flex-col items-start transition duration-300"
-                >
-                    <span className="text-white bg-green-400 text-5xl mb-3 p-2 rounded-lg">{mediaImages[imageIndex].title}</span>
-                    <span className="text-white bg-purple-400 text-2xl ml-4 p-2 rounded-lg">{mediaImages[imageIndex].subtitle}</span>
-                </div> 
             </motion.div>
-        </section>
+        </div>
     )
 }
 
-export default HeroSlider
+export default TestimonialSlider

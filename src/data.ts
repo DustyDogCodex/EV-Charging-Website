@@ -12,18 +12,47 @@ type imagesProps = {
 export const mediaImages: imagesProps[] = [
     {
         image: HeroImage1,
-        title: 'Title 1',
-        subtitle: 'Subtitle 1' 
+        title: 'Charge Forward',
+        subtitle: 'Transforming the Way You Charge, Drive, and Thrive' 
     },
     {
         image: HeroImage2,
-        title: 'Title 2',
-        subtitle: 'Subtitle 2' 
+        title: 'Drive Electric, Charge Exceptional',
+        subtitle: 'Fueling Your EV Journey with Unmatched Efficiency and Reliability' 
     },
     {
         image: HeroImage3,
-        title: 'Title 3',
-        subtitle: 'Subtitle 3' 
+        title: 'Everywhere You Go, We Charge',
+        subtitle: 'Connecting You to a Nationwide Network of Charging Excellence' 
     }
 ]
 
+/* testimonial placeholders */
+export type Review = {
+    name: string,
+    position: string,
+    image: string,
+    review: string
+}
+
+/* array containing all reviews to be displayed */
+export const CustomerReviews: Review[] =[
+    {
+        name: 'ABC',
+        position: 'Executive',
+        image: '/assets/AAA.png',
+        review: 'Best company in the world!'
+    },
+    {
+        name: 'XYZ',
+        position: 'Executive',
+        image: '/assets/AAA.png',
+        review: 'Absolutley the best service in the industry!'
+    },
+    {
+        name: '123',
+        position: 'Executive',
+        image: '/assets/AAA.png',
+        review: 'Kings of the industry!'
+    }
+]

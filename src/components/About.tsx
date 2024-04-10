@@ -21,7 +21,7 @@ function About() {
                         visible: { opacity: 1, x: 0 }
                     }}
                 >
-                    <p className='mb-5'>Future proof your home or business with our tailored turnkey solutions for EV charging today.</p>
+                    <p className='mb-12'>Future proof your home or business with our tailored turnkey solutions for EV charging today.</p>
 
                     <Link to='about' className='bg-green-500 mt-8 px-8 py-2 rounded-lg text-white'>
                         Learn More

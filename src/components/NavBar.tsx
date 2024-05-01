@@ -81,6 +81,11 @@ function NavBar({ currentPage, setCurrentPage }: LinkProps) {
                             setCurrentPage={setCurrentPage}
                         />
                         <SmoothLink
+                            page="Careers"
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        />
+                        <SmoothLink
                             page="Contact"
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage}

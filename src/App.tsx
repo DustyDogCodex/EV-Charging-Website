@@ -8,6 +8,7 @@ import AboutUs from './pages/AboutUs'
 import PageNotFound from './pages/404'
 import ProductsPage from './pages/ProductsPage'
 import ContactUsPage from './pages/ContactUsPage'
+import CareersPage from './pages/CareersPage'
 
 function App() {
     //using state to identify the current page the user is browser
@@ -26,6 +27,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="about" element={<AboutUs />} />
                     <Route path="products" element={<ProductsPage />} />
+                    <Route path="careers" element={<CareersPage />} />
                     <Route path="contact" element={<ContactUsPage />} />
                     <Route path="*" element={<PageNotFound />} />
                 </Routes>
